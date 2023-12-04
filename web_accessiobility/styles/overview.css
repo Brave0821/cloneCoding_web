@@ -1,10 +1,31 @@
+/* ctrl + f 찾기 - > 바꾸기  한번에 바꾸기 가능 */
 main {}
 main .title_path {}
 main .title_path h1 {}
 main .title_path .path {}
 main .title_path .path dd {}
-main .title_path .path .content {}
-main .title_path .path .content h2 {}
-main .title_path .path .content .first {}
-main .title_path .path .content .first .p {}
+main .title_path .path dd img {}
+main .title_path .path dd em {}
+main .content {}
+main .content h2 {}
+main .content h2 img {}
+main .content .first {}
+main .content .first p {}
+
+/* ---------------------------------------------- */
+
+
+main {} /* 1 */
+main .title_path {} /* 2 */
+main .title_path h1 {}
+main .title_path .path {}
+main .title_path .path dd {} 
+main .title_path .path dd img {} 
+main .title_path .path dd em {}
+main .content {} 
+main .content h2 {}
+main .content h2 img {}
+main .content .first {}
+main .content .first em {}
+main .content p {}
 
