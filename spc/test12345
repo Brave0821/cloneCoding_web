@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/samlip.css">
+</head>
+<body>
+    <main>
+        <dl class="path">
+            <dt class="skip"></dt>
+            <dd>
+                <a href="">home</a>
+                <a href=""></a>
+                <a href=""></a>
+                <em>경영이념</em>
+            </dd>
+        </dl>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/*header*/
+header {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+header h1 {}
+header h1 a {
+    font-family: 'Noto Sans KR', sans-serif; 
+
+}/* a랑 h원이 묶여있는데 h1 a 따로쓰는지. */
+header.top_container {}
+header.top_container .company_avtive {}
+header .lnb {}
+header .lnb a {} 
+/*main*/
+main {}
+main .path {}
+main .path dd {}
+main .path dd {}
+main h1
+main p
+main .bg
+main .bg p
+/*  */
+main .vision
+main .vision h2
+main .vision p
+/*  */
+main .goal_strategy
+main .goal_strategy h2
+main .goal_strategy ul
+main .goal_strategy ul li
+main .goal_strategy
+main .goal_strategy h3
+main .goal_strategy ul
+main .goal_strategy ul li /* 이부분!  내일 확인하기 */
+/*footer*/
+footer {}
+footer .top_title {}
+footer .top_title .left {}
+footer .top_title .left a {}
+footer .right {}
+footer .right a {}
+footer .right a address{}
+footer .right a .copyright {}
+/*   
+noto sans 적용 시 사용하기.
+font-family: 'Noto Sans KR', sans-serif; 
+spc 삼립 html
+*/
