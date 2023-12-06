@@ -7,32 +7,125 @@ header h1 a {
     font-family: 'Noto Sans KR', sans-serif; 
 
 }/* a랑 h원이 묶여있는데 h1 a 따로쓰는지. */
-header.top_container {}
-header.top_container .company_avtive {}
+header h1 a img {
+    font-family: 'Noto Sans KR', sans-serif; 
+
+} /* nav = top_container 라고 줌 */
+
+header.top_container { 
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+header.top_container a {}
+header .top_container a .company_avtive {
+    color:#36b4e5;
+
+}
 header .lnb {}
 header .lnb a {} 
+
 /*main*/
-main {}
-main .path {}
+main {
+    text-align: center;
+}
+main .path {
+    background-color: #f1f1f1;
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    text-align: right;
+    padding: 15px 50px;
+}
 main .path dd {}
-main .path dd {}
-main h1
-main p
-main .bg
-main .bg p
+main .path dd a {}
+main .path dd em {font-weight: 800;}
+main h1 {
+    font-size: 2.5rem;
+    margin: 40px 0 15px;
+}
+/* main > p {margin-bottom: 40px;}  */
+main h1+p {margin-bottom: 40px;}
+main .bg {
+    background-color: #aaa;
+    padding: 40px 0;
+}
+main .bg p {
+    /* font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif; */
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif; 
+}   
+/* 
+ */
+main .vision {
+    padding: 40px 0;
+}
+main .vision h2 {
+    font-size: 1.313rem;
+    color:#36b4e5;
+    margin-bottom: 20px;
+}
+main .vision p {
+    font-size: 1.938rem;
+    line-height: 1.5;
+}
+main .vision .first {margin-bottom: 60px;}
 /*  */
-main .vision
-main .vision h2
-main .vision p
-/*  */
-main .goal_strategy
-main .goal_strategy h2
-main .goal_strategy ul
-main .goal_strategy ul li
-main .goal_strategy
-main .goal_strategy h3
-main .goal_strategy ul
-main .goal_strategy ul li /* 이부분!  내일 확인하기 */
+main .goal_strategy {
+    background-color: #f1f1f1;
+    padding: 40px 0;
+}
+main .goal_strategy h2 {
+    font-size: 1.113rem;
+    margin-bottom: 20px;
+}
+main .goal_strategy ul {}
+main .goal_strategy ul li { /* 공통 css */
+    background-color:#ffffff;
+    font-size: 1.5rem;
+    border-radius: 50%; /* 원 만들기 */
+    display: inline-block;
+    /* box-shadow x축 y축 흐림값 색상 원 전부 그림자 효과 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-right: -10px;
+} /*  위에가 전체 css  */ 
+main .goal_strategy .goal {
+    margin-bottom: 50px;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+main .goal_strategy .goal li{ /*  개별 css  */
+    width:250px; height:250px;
+    /* line-height 수직 중앙 규칙 (내용이 1줄일 경우만 가능 */
+    line-height: 250px; /* height (높이값) 과 같은 값 적용하기  중앙으로 글  */
+}
+main .goal_strategy .strategy li{
+    width: 180px; height:180px;
+    padding: 45px 7px 0;
+}
+main .goal_strategy ul li.first {background-color:#36b4e5;}
+main .goal_strategy ul li.last {background-color:#f3c300;}
+main .goal_strategy ul li h3 {
+    font-size: 1.125rem;
+    font-family: 'Noto Sans KR', sans-serif; 
+} 
+main .goal_strategy ul li p {
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+/* 이부분!  내일 확인하기
+main .goal_strategy ul li p {line-height: 1.5;}
+/*  .goal_strategy ul li
+/*  .goal_strategy ul li .first
+/*  
+*/
+/* main .goal_strategy h2 {
+    font-size: 1.313rem;
+    margin-bottom: 20px;
+} */
+main .goal_strategy ul li {} 
+main .goal_strategy ul li p {
+    line-height: 1.5;
+} /* 이부분!  내일 확인하기 */
+
 /*footer*/
 footer {}
 footer .top_title {}
@@ -40,8 +133,8 @@ footer .top_title .left {}
 footer .top_title .left a {}
 footer .right {}
 footer .right a {}
-footer .right a address{}
-footer .right a .copyright {}
+footer .address{}
+footer .copyright {}
 /*   
 noto sans 적용 시 사용하기.
 font-family: 'Noto Sans KR', sans-serif; 
