@@ -28,6 +28,7 @@ main .title_path .path dd em {
 }
 main .contents {
     padding:50px 20px 50px 20px;
+    background: url(../images/bg.png) no-repeat right;
 }
 main .contents h2 {
     color:#1e61a8;
@@ -36,6 +37,7 @@ main .contents h2 {
 main .contents h2 img {
     margin-right:8px;
 }
+
 main .contents .first {
     padding-left:25px;
     font-size:1.75rem;

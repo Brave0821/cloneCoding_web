@@ -14,13 +14,9 @@ header h1 a img {
 
 header.top_container { 
     color: #000000;
-    font-family: 'Noto Sans KR', sans-serif; 
 }
 header.top_container a {}
-header .top_container a .company_avtive {
-    color:#36b4e5;
-
-}
+header .top_container .company_avtive {color:#36b4e5;}
 header .lnb {}
 header .lnb a {} 
 
