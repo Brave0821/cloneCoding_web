@@ -15,10 +15,9 @@
 * 강조 색상(배경, 글자) - > #36b4e5 , #f3c300   
 * 색상 (기본글자, 배경) #000, #fff
 * 메뉴크기 16px 
-<class>
-* vision - > #36b4e5
-* goal_strategy1 - > #36b4e5
-* goal_strategy2 - > #fff 
-* goal_strategy3 - > #f3c300
-
+* 제목 글자 크기 = 40px 
+* 부제목 글자 크기 = 21px
+* 내용 글자 크기 = 16px, 18px
+* 강조 내용 = 31px 
+* 목표 내용 = 24px 
 
