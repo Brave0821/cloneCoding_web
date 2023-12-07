@@ -6,7 +6,7 @@
 	본문 내용 = 12px
 */
 
-
+/* main */
 main {
     width:850px;
     border:1px solid #ddd;
@@ -15,16 +15,27 @@ main {
 main .title_path {
     border-bottom:1px solid #ddd;
     padding:25px 20px;
+    overflow: hidden; /* 여기서 초기화 */
 }
-main .title_path h1 {font-size:1.125rem;}
-main .title_path .path {}
-main .title_path .path dd {font-size:0.688rem;}
+main .title_path h1 {
+    font-size:1.125rem;
+    float: left; 
+}
+main .title_path .path {
+    float: right; /* 위에 오른쪽으로 */
+
+}
+main .title_path .path dd {
+    font-size:0.688rem;
+    /* float: right; */
+}
 main .title_path .path dd img {}
 main .title_path .path dd em {
     font-size:0.688rem;
     font-weight:500;
     letter-spacing:-0.4px;
     font-family:'Noto Sans KR' , sans-serif;
+    /* float: right; */
 }
 main .contents {
     padding:50px 20px 50px 20px;
