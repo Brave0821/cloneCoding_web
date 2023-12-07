@@ -1,23 +1,38 @@
 /*header*/
 header {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 92px;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
     font-family: 'Noto Sans KR', sans-serif;
+       /* justify-content:right; */
 }
 header h1 {}
 header h1 a {
     font-family: 'Noto Sans KR', sans-serif; 
-
+    
 }/* a랑 h원이 묶여있는데 h1 a 따로쓰는지. */
 header h1 a img {
-    font-family: 'Noto Sans KR', sans-serif; 
-
+    width: 60px; 
+    margin: 10px;
 } /* nav = top_container 라고 줌 */
 
-header.top_container { 
+header nav { 
     color: #000000;
+    margin: 30px;
 }
-header.top_container a {}
-header .top_container .company_avtive {color:#36b4e5;}
-header .lnb {}
+header nav a {
+    padding-right: 20px;
+}
+header nav a:last-child{padding-right: 0%;}
+header nav .company_avtive {
+    color:#36b4e5;
+}
+header .lnb {
+    margin: 30px;
+}
 header .lnb a {} 
 
 /*main*/
@@ -123,13 +138,31 @@ main .goal_strategy ul li p {
 } /* 이부분!  내일 확인하기 */
 
 /*footer*/
-footer {}
-footer .top_title {}
-footer .top_title .left {}
-footer .top_title .left a {}
+footer {
+    padding: 0 50px;
+    
+}
+footer .top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+footer .top .left {
+}
+footer .top .left a {
+    font-weight: 700;
+    margin-right: 20px;
+}
 footer .right {}
-footer .right a {}
-footer .address{}
+footer .right a {
+    border: 1px solid #aaa;
+    padding: 7px 15px;
+    display: inline-block;
+}
+footer .address{
+    font-family: 'Noto Sans KR', sans-serif;
+}
 footer .copyright {}
 /*   
 noto sans 적용 시 사용하기.
