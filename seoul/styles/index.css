@@ -76,3 +76,67 @@ header .seoul_bottom .lang_right .weather .current_weather p {
     font-family: Noto Sans KR;
     line-height: normal;
 }
+/* footer top */
+footer {
+    background-color: aquamarine;
+    width:1151px;margin: 0 auto; 
+}
+footer .top {}
+footer .top .menu {}
+footer .top .menu a {}
+footer .top .sns {
+    /* background-image: url(../images/icon_sns2/icon_set3.png);
+    background-repeat: no-repeat;
+    width: 250px; */
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: right
+}
+footer .top .sns a {
+    background-image: url(../images/icon_sns2/icon_set3.png);
+    background-repeat: no-repeat;
+    width: 25px; height: 25px;
+    text-indent: -9999px;
+    display: inline-block;
+    /* display: flex; 
+    justify-content: space-around; */
+}
+footer .top .sns a:nth-child(1) {}
+footer .top .sns a:nth-child(2) {background-position-x:-25px;}
+footer .top .sns a:nth-child(3) {background-position-x:-50px;}
+footer .top .sns a:nth-child(4) {background-position-x:-75px;}
+footer .top .sns a:nth-child(5) {background-position-x:-100px;}
+footer .top .sns a:nth-child(6) {background-position-x:-125px;}
+/* 색 적용 */
+footer .top .sns a:hover {
+    background-position-y:-25px;
+}/* background-position-y:-25px; 밑에 값 같아서 통일 */
+footer .top .sns a:nth-child(1):hover {}
+footer .top .sns a:nth-child(2):hover {}
+footer .top .sns a:nth-child(3):hover {}
+footer .top .sns a:nth-child(4):hover {}
+footer .top .sns a:nth-child(5):hover {}
+footer .top .sns a:nth-child(6):hover {}
+/* footer bottom */
+footer .bottom {background-color: aqua;}
+footer .bottom .left {}
+footer .bottom .left p {}
+footer .bottom .left p img {
+    
+}
+footer .bottom .left address {
+    font-size: 13px;
+    font-weight: 400;
+}
+footer .bottom  .banner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right
+}
+footer .bottom  .banner a {
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: right; */
+}
+/*  */
