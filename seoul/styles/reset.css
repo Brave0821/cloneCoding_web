@@ -14,8 +14,10 @@ address,details,mark,time,video,img,summary,iframe,div {
     text-decoration:none;
 }
 ul,ol,li {list-style:none;}
-button {cursor:pointer;} /* 커서를 포인터 모양으로 버튼에 마우스를 대면 손모양 */
+button {cursor:pointer; background: none; border:0;} /* 커서를 포인터 모양으로 버튼에 마우스를 대면 손모양 */
 table,tr,td,th {border-collapse:collapse;} /* 한 줄로 나온다. */
+fieldset {border: 0;}
+input, select, option {background:none; border:0;}
 .skip {display: none;} /* html에서 의미적으로 존재하나 css디자인상에선 숨겨야하는 요소에 사용 ex)lable */
 /* 끝 23/12/04 https://jigsaw.w3.org/css-validator/validator - > 검사완료 */
 

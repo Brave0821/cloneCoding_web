@@ -1,0 +1,78 @@
+/* header */
+header {}
+header .seoul_top {
+    width: 1551px; height: 48px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; /* 양쪽 끝 */
+    align-items: center;
+    margin: 0 auto;
+}
+header .seoul_top nav {} 
+header .seoul_top nav a {
+    margin-right: 16px;
+    font-size: 0.875rem;
+} /*  */
+header .seoul_top nav a:last-child{margin-right: 0;}
+header .seoul_top nav a img {} /*  */
+header .seoul_top .right {}
+header .seoul_top .right a {
+    margin-left: 16px;
+    font-size: 0.875rem;
+}
+header .seoul_top .right a:first-child{margin-left: 0;}
+header .seoul_bottom {
+    width: 1151px; height: 119px; margin: 0 auto;
+    /* h1, search_frm, right 정렬 대상의 부모 flex 대상 */
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .seoul_bottom h1 {}
+header .seoul_bottom h1 a {}
+header .seoul_bottom h1 a img {}
+header .seoul_bottom #search {} /* form에 input id search */
+header .seoul_bottom #search fieldset {
+    width: 370px; height: 47px;
+    border: 2px solid #126cb3;
+    background: #fff;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; padding: 0 13px 0 21px;
+}
+header .seoul_bottom #search fieldset #user_search {
+    width: 300px; outline: none; /* 자주쓰는속성 테두리 제거 */
+} /* input id # */
+header .seoul_bottom #search fieldset #user_search::placeholder {color:#126cb3;}
+header .seoul_bottom .lang_right {} 
+header .seoul_bottom .lang_right #lang_sele {
+    float: right;
+} /* form - > id #lang_sele  */
+header .seoul_bottom .lang_right #lang_sele fieldset {
+}
+header .seoul_bottom .lang_right #lang_sele fieldset select {
+    background-color: #fff;
+    width: 98px; height: 28px; margin-right: 7px;
+    border: 1px solid #126cb3; font-size: 0.8125rem;
+}
+header .seoul_bottom .lang_right #lang_sele fieldset select option{}
+header .seoul_bottom .lang_right #lang_sele fieldset #go {
+    background-color: #126cb3; color: #fff;
+    font-size: 0.8125rem;
+    width: 28px; height: 28px;
+}
+header .seoul_bottom .lang_right .weather {clear: both;} /* 옆으로 안가겠다는 표시  clear: both; */
+header .seoul_bottom .lang_right .weather .current_weather {
+    color: #000;
+    text-align: left;
+    font-family: Noto Sans KR;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03rem;
+    padding: 5px 0;
+}
+header .seoul_bottom .lang_right .weather .current_weather p {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Noto Sans KR;
+    line-height: normal;
+}
