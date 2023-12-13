@@ -76,6 +76,184 @@ header .seoul_bottom .lang_right .weather .current_weather p {
     font-family: Noto Sans KR;
     line-height: normal;
 }
+
+main {}
+main > * {width: 1151px; margin:auto;}
+main .visual {
+    background-color: yellowgreen;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+main .visual .left {
+    background-color: violet;
+    width: 770px;
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around; */
+    position: relative;
+}
+main .visual .left a {}
+main .visual .left a img {
+
+}
+main .visual .left .close {
+    font-size: 0.813rem;
+    /* width: 52px; height: 28px; */
+    color: #fff;
+    border: 1px solid #000;
+    background: #126cb3;
+    padding: 5px 9px; 
+    border-radius: 5px; 
+    display: inline-block; /* 겹쳐서 */
+    position: absolute; /*  */
+    right: 15px; bottom: 15px; /* 버튼에 가까운 방향대로  */
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: right; */
+}
+/*  */
+main .visual .right {
+    background-color: turquoise;
+    width: 360px;
+}
+main .visual .right .corona {
+    position: relative;
+    display: block;
+    background-color: tomato;
+}
+main .visual .right .corona img {
+    /* width: 360px; height: 260px; */
+}
+main .visual .right .corona .date {
+    /* border: 1px solid #000; */
+    position: absolute;
+    right: 20px; top: 14px;
+    font-family: Noto Sans KR;
+}
+main .visual .right .corona .data {
+    position: absolute;
+    font-family: Noto Sans KR;
+}
+main .visual .right .corona .data:nth-child(3) {
+    /* width: 140px; height: 13px; */
+    /* border: 1px solid #000; */
+    /* background-color: yellow; */
+    position: absolute;
+    left: 30px; top: 84px;
+    width: 140px; 
+    text-align: center;
+} /* 확진자 */
+main .visual .right .corona .data:nth-child(4) {
+    /* background-color: aqua; */
+    position: absolute;
+    right: 29px; top: 84px;
+    width: 140px; 
+    text-align: center;
+} /* 추가 확진자 */
+main .visual .right .corona .data:nth-child(5) {
+    /* background-color: blue; */
+    position: absolute;
+    left: 30px; bottom: 58px;
+    width: 94px; 
+    text-align: center;
+} /* 퇴원 */
+main .visual .right .corona .data:nth-child(6) {
+    /* background-color: blue; */
+    position: absolute;
+    right: 121px; bottom: 58px;
+    width: 94px; 
+    text-align: center;
+} /* 추가퇴원  */
+main .visual .right .corona .data:nth-child(7) {
+    /* background-color: aqua; */
+    position: absolute;
+    right: 32px; bottom: 58px;
+    width: 94px; 
+    text-align: center;
+} /* 사망 */
+main .visual .right .traffic {}
+main .visual .right .traffic img {}
+
+/* 2행 */
+main .service {
+    
+}
+main .service .service_title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* background-color: tomato; */
+}
+
+main .service .service_title h1 {
+    /* width: 82px; height: 24px; */
+    /* border: 1px solid #000; */
+    background: #d9d9d9;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.48px;
+}
+main .service .service_title .site {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    background-color: yellow;
+}
+/* main .service .service_title .site .contents {} */
+
+
+/* 2행  */
+main .service {}
+main .service .service_title {
+    background-color: aqua;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 15px 2;
+}
+main .service .service_title h1 {}
+
+main .service .service_title .site {}
+
+main .service .contents {
+    background-color: yellowgreen;
+    display: flex; flex-flow: row nowrap;
+}
+main .service .contents a {
+    display: flex; /* a한테 display flex를 적용하면 display:block를 쓴 것과 같은 의미로 적용된다. */
+    flex-flow: column nowrap;
+    width: 9.09%;
+    text-align: center;
+}
+main .service a img {
+    width: 60px; margin: 0 auto;
+}
+main .service a span {
+    font-size: 0.813rem;
+}
+/* 2행 */
+
+/* 3행 */
+main .bnr_bg {
+    background-color: #eff4f8;
+    width: 1920px;
+}
+main .bnr_bg .bnr {
+    width: 1151px;
+    margin:0px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* justify-content: center; */
+}
+main .bnr_bg .bnr a {
+    display: block;
+    
+}
+main .bnr_bg .bnr a img {}
+
 /* footer top */
 footer {
     background-color: aquamarine;
