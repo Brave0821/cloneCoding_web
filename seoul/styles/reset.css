@@ -20,6 +20,6 @@ fieldset {border: 0;}
 input, select, option {background:none; border:0;}
 .skip {display: none;} /* html에서 의미적으로 존재하나 css디자인상에선 숨겨야하는 요소에 사용 ex)lable */
 /* 끝 23/12/04 https://jigsaw.w3.org/css-validator/validator - > 검사완료 */
-
+/* .font-family: 'Noto Sans KR', sans-serif;  */
 /* 데탑환경 글자 내용 크기 16px 
 모바일 태블릿 글자 크기 12 ~14px */
