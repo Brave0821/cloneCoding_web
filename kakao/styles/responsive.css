@@ -1,0 +1,6 @@
+/* @media  */
+@media screen and (max-width:769px) {
+    header h1 a img {width: 100px;} /* 로고 크기 줄이기 */
+    header nav a {font-size: 0.875rem; margin-right: 10px;}    
+    header .recruitment {display: none;}
+} /* 화면 줄였을 때 769부터 인재영입 사라짐 */
