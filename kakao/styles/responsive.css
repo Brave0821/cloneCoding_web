@@ -1,6 +1,52 @@
 /* @media  */
-@media screen and (max-width:769px) {
+@media screen and (max-width:1200px) { 
+    main .visual {height: 500px;} /* 수정할거 가져옴 */
+    main .visual .logo img {height: 200px;}
+}
+@media screen and (max-width:900px) {  /* 900이하일때  */
+    main .visual {height: 400px;} /* 수정할거 가져옴 */
+
+}
+
+@media screen and (max-width:769px) {/* 이하일때 */
     header h1 a img {width: 100px;} /* 로고 크기 줄이기 */
     header nav a {font-size: 0.875rem; margin-right: 10px;}    
     header .recruitment {display: none;}
+    /* visual */
+    main .visual {
+        background-image: url(../images/m_bg.jpg);
+        /* background-repeat: no-repeat; */
+        background-size: cover; /* cover; 전부 보이기 */
+        background-position: center;
+    } /* 크기가 클때는 영상 줄이면 이미지로 보인다. */
+    main .visual video {display: none;}
+    main .visual .logo {}
+    main .visual .logo img {height: 150px;}
+    main .board, main .gallery { /* 추가 줄였을때 예쁘게 보이게 */
+        display: flex;
+        flex-flow: column nowrap; /* 모바일용  /* 추가 줄였을때 예쁘게 보이게 */
+        align-items: center; /* 교차축이기에 ju x align-items */
+    }
+    main .board a, main .gallery a {
+        width:calc(100% - 40px); /* 모바일용 40은 양옆 마진 2개 +  */ 
+        margin-bottom: 20px; /* 모바일용 화면 여백 */
+
+        
 } /* 화면 줄였을 때 769부터 인재영입 사라짐 */
+    /* footer */
+    footer .top {
+        display: flex; flex-flow: column nowrap;
+    }
+    footer .top .site {margin-top: 15px;} /* 관련사이트와 위에 글 목록과 사이 떨어짐 */
+    footer .top .site .sub {
+        
+    }
+}/* 769 and--------------------------------------------------------------------- */
+/* @media screen and (max-width:320px) {
+    main .board {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    main .board a {}
+
+} */
