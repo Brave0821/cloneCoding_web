@@ -79,3 +79,222 @@ info.addEventListener("click", function(){
 close.addEventListener("click", function(){
     popup.style.display = "none";
 })
+
+/* ---------------------------------------------------------------------- */
+console.log("--------------------------숙제------------------------------------")
+
+/* <!-- # 오늘의 집 배송 정보 보기 cart_sample.js 이어서-
+
+목표) 배송 1/9 (화) 도착 예정 94% 메뉴를 클릭하면 메뉴 펼침 정보 나타나기
+
+1. 펼침 메뉴 초기 숨기기
+2. 배송1/9(화) 도착 예정 94% 메뉴 클릭 시 
+3. 위(2)의 둥근 모서리 하단 모양 뾰족하게 변경
+4. 위(2)의 94% 옆 화살표 상하 반전 하기
+5. 메뉴 펼침 정보 보이기 --> */
+
+// <i class="fa-solid fa-chevron-down"></i>
+
+const down = item_detail.querySelector(".benefit_shipping i[class$=down]")
+console.log(down)
+/* delivery_menu_open  */
+const menu_open = item_detail.querySelector(".benefit_shipping .delivery_menu_open")
+console.log(menu_open)
+const menu = item_detail.querySelector(".benefit_shipping .delivery_menu")
+console.log(menu)
+
+// const down_up = item_detail.querySelector(".benefit_shipping i[class$=down]")
+// console.log(down_up)
+// const down_close = item_detail.querySelector(".benefit_shipping i[class$=down]")
+
+
+menu_open.style.display = "none";
+//메뉴 숨김.
+
+down.addEventListener("click", function(){
+    menu_open.style.display = "block";
+})
+
+// https://www.techiedelight.com/ko/remove-inline-css-properties-javascript/
+// 보더 값 빼기
+
+menu.addEventListener("click", function(){
+    /* menu_open.style.removeProperty = ("boder"); */
+    menu_open.style = "boder-bottom-left-radius:0; boder-bottom-right-radius:0;"
+
+    down.style.transform = `scaleY(-1)`;
+})
+
+
+// down.addEventListener("click", function(){
+//     down_up.style.transform = "rotate(50px)"
+// });
+
+
+// down.addEventListener("click", function(){
+//     menu_open.style.display = "none";
+// })
+
+
+/*  transform: scaleY(-1); transition: .3s;  */
+// down.addEventListener("click", function(){
+//     down_up.style({transform : ["scaleY(-1)",
+//     "transition(.3s)"
+// ]})
+
+// })
+
+
+/*  menu.addEventListener("click", function(){
+    menu_open.style.borderRadius = ("0px 0px 30px 0px"); 
+})
+ */
+
+// menu.addEventListener("click", function(){
+//     menu.style.display = "none";
+// })
+
+
+// down_close.addEventListener("click", function(){
+//     menu.style.display = "none";
+// })
+
+// 상품 색상, 사이즈 옵션을 선택했을 때 선택 정보가 selectResult에 결과 값으로 출력되고 num_result의 구매수량에 따라 order_price에 가격이 출력되는 결과
+
+// 상품 색상, 사이즈 옵션을 선택했을때 변수 생성 
+
+/* 
+
+색상 colorOpt 을 클릭하면 option이 나온다.(1)
+색상 colorOpt 을 클릭 안하면 사이즈 sizeOpt에 option이 안보인다. 
+
+사이즈 sizeOpt 을 클릭하고 사이즈를 선택하면 num_result 가 열린다.(1)
+num_result에 plus를 선택하면 옆에 price 가격이 올라간다.
+
+
+원래 본 페이지는 select가 각각 존재한다. 색깔 별 등등 
+
+상세 절차 : 상품 색상, 사이즈 옵션을 선택했을 때 
+1. 색상(옵션1) 선택 전 사이즈(옵션2) 비활성화 
+2. 옵션1 선택 시옵션 2 활성화
+2-1 옵션1에 때한 옵션 데이터에 따라 옵션2의 각 다른 셀럭트 활성화  
+
+
+/* (".benefit_shipping i[class$=down]") */
+
+console.log("----------------------------------------------------")
+const colorOpt = document.querySelector("#colorOpt")
+const sizeOpt = document.querySelector("#sizeOpt")
+/* const num_result = document.querySelector(".num_result") */ /* me */
+/* const select_result = document.querySelector(".selectresult") */ /* me */
+/* console.log(colorOpt,sizeOpt,num_result,select_result); */
+console.log(colorOpt.options[1].value);
+console.log(colorOpt.options[1].value.text);
+console.log("---------------------!!!---------------------------")
+const opt1 = document.createElement("span")
+const opt2 = document.createElement("span")
+console.log(opt1,opt2);
+const result_view = document.querySelectorAll(".selectResult > span > span[class^=opt]")
+console.log(result_view);
+const select_result = document.querySelector(".selectResult")
+let num = 1;
+let price = 36900;
+const num_view = select_result.querySelector("#num_count");
+console.log("---------------------!!!!!!!!---------------------------")
+console.log(num_view)
+const price_view = select_result.querySelector(".order_price");
+const price_total_view = document.querySelector("fieldset:nth-child(2) .order_price")
+console.log("---------------------!!!---------------------------")
+const num_count = document.querySelector("num_count")
+console.log(num_count)
+let order_price = document.querySelector(".order_price")
+console.log(order_price)
+let plus_btn = document.querySelector("#plus")
+console.log(plus_btn)
+let minus_btn = document.querySelector("#minus")
+console.log(minus_btn)
+let total = 0;
+select_result.style.display="none";
+/* select_result.style.display = "none"; */ /* me */
+//colorOpt, sizeOpt text 데이터를 모두 변수로 수집 후 
+// createElement, appendChild 를 이용해서 opt1 2 선택 데이터 출력하기
+
+colorOpt.addEventListener("change", function(){
+    console.log(colorOpt.value)
+    console.log(colorOpt.options[colorOpt.selectedIndex].text)
+    opt1.innerHTML = colorOpt.options[colorOpt.selectedIndex].text
+    console.log(opt1)
+})
+
+sizeOpt.addEventListener("change", function(){
+    // 선택옵션 데이터 저장하기
+    console.log(sizeOpt.options[sizeOpt.selectedIndex].text)
+    opt2.innerHTML = sizeOpt.options[sizeOpt.selectedIndex].text
+    console.log(opt2)
+    // 선택 옵션 부모 보이기
+    select_result.style.display="grid";
+    // 선택옵션 적용 대상에 위 옵션 데이터 값 출력하기
+    result_view[0].appendChild(opt1)
+    result_view[1].appendChild(opt2)
+    //선택 옵션의 수량(num) 출력하기
+    num_view.value = num;
+    // 선택 옵션의 가격(price) 출력하기
+    price_view.innerHTML = price.toLocaleString("ko-kr")+"원"
+    price_total_view.innerHTML = price.toLocaleString("ko-kr")+"원"
+}) 
+
+// 사이즈 안에 옵션 클릭 시 밑에 나와야하는데?
+console.log("-----------------밑에 오류-------------------------")
+const resultClose = select_result.querySelector(".close");
+
+resultClose.addEventListener("click", function(){
+    resultClose.parentElement.style.display= "none";
+})
+
+
+
+///////////////////////////////////////////////////////
+
+
+plus_btn.addEventListener("click", function(){
+    num += 1;
+    // 수량 1 증가 
+    // 수량 1 증가한 값 표시 
+    num_view.value = num;   
+    total = num * price;
+    // 3. 구매가 세자리 콤마 표시 
+    price_view.innerHTML = total.toLocaleString("ko-kr")+"원"
+    price_total_view.innerHTML = total.toLocaleString("ko-kr")+"원"
+})
+
+
+minus_btn.addEventListener("click", function(){
+    num -= 1;
+    num_view.value = num;
+    total = num * price;
+    price_view.innerHTML = total.toLocaleString("ko-kr")+"원"
+    price_total_view.innerHTML = total.toLocaleString("ko-kr")+"원"
+})
+
+
+//selectResult 안 x 클릭 시 x의 부모 (selectResult)를 dom 관계로 선택해서 숨기기 
+
+
+/* sizeOpt.addEventListener("click", function(){ 
+    select_result.style.display = "block";
+}) *//* me */
+
+/* 
+menu_open.style.display = "none";
+menu_open.style.display = "block"; */
+
+// 수량 -, + 버튼 클릭 시 수량값이 변경되며 그에 따라 가격 변동
+
+/* const num_count = document.querySelector("num_count")
+console.log(num_count)
+let plus_btn = document.querySelector("#plus")
+console.log(plus_btn)
+let minus_btn = document.querySelector("#minus")
+console.log(minus_btn)
+ */
+
