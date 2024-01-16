@@ -1,0 +1,47 @@
+/* js classList로 호출할 클래스 모음. */
+/* 로그인 탭 제목 클릭 시 활성화 active */
+/*  */
+#login_wrap main #loginFrm fieldset .login_title .active {
+    background: #fff; border-bottom-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative; z-index: 100;
+    /* position: relative; */
+}
+#login_wrap main #loginFrm fieldset .login_title .active::after {
+    
+    content: ""; display: inline-block;
+    background: green url(../images/m_sp_login.png);
+    width: 14px; height: 59px;     
+    background-size: 251px 211px;
+    position: absolute; top: -0.9px;
+    z-index: 100; /*z-index: 100; 추가0116  */
+} 
+/* 개별 값 */
+#login_wrap main #loginFrm fieldset .login_title .active:nth-child(1):after {
+    background-position: 0 -130px;
+    right: -10.1px;
+
+} /*  ID로그인 */
+#login_wrap main #loginFrm fieldset .login_title .active:nth-child(2)::before {
+    content: ""; display: inline-block;
+    background: green url(../images/m_sp_login.png);
+    background-size: 251px 210px;
+    width: 14px; height: 59px;
+    position: absolute; left: -10.1px;
+    background-position:-16px -130px;
+    z-index: 100;
+} /* 일회용번호 */
+#login_wrap main #loginFrm fieldset .login_title .active:nth-child(2):after {
+    background-position: 0 -130px; /* 좌표값만 수정하면 됨 */
+    right:-10.1px ; 
+} /* 일회용번호  */
+#login_wrap main #loginFrm fieldset .login_title .active:nth-child(3):after {
+    background-position: -16px -130px;
+    left: -10.1px;
+} /* QR코드  */
+
+/* 탭 제목 활성화 아이콘 변경 */
+#login_wrap main #loginFrm fieldset .login_title h2.active:nth-child(1) a span::before{background-position-y:-100px;}
+#login_wrap main #loginFrm fieldset .login_title h2.active:nth-child(2) a span::before{background-position-y:-138px;}
+#login_wrap main #loginFrm fieldset .login_title h2.active:nth-child(3) a > em::before{background-position-y:-44px;}

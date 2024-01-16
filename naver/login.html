@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="">
@@ -10,6 +9,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/login_js.css"> <!-- JS 호출용 -->
     <!-- spa 싱글페이지로 구현해야 좋다. -->
 </head>
 
@@ -28,7 +28,7 @@
                     <legend class="skip">ID 로그인, 일회용번호, QR코드 양식</legend>
                     <!-- 제목 탭 구성 -->
                     <div class="login_title">
-                        <h2 class="active"><a href="#"><span>ID로그인</span></a></h2>
+                        <h2 ><a href="#"><span>ID로그인</span></a></h2> <!-- class="active" 삭제 0116 -->
                         <h2><a href="#"><span>일회용번호</span></a></h2>
                         <h2><a href="#">
                                 <em>QR코드</em>
@@ -42,9 +42,9 @@
                     <div class="login_container">
                         <!-- 내용 탭 1. ID 로그인 -->
                         <div class="login_c id_login">
-                            <div class="id_pw_input">
-                                <input type="text" placeholder="아이디" id="userId">
-                                <input type="text" placeholder="비밀번호" id="userPw">
+                            <div class="id_pw_input"> <!-- span 태그추가 0116 -->
+                                <span><input type="text" placeholder="아이디" id="userId"></span>
+                                <span><input type="password" placeholder="비밀번호" id="userPw"></span>
                             </div> <!-- id_pw_input 끝 -->
                             <div class="id_pw_state">
                                 <div class="login_state">
