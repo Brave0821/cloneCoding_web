@@ -1,3 +1,11 @@
+/* login.js 수정을 위해 백업 파일 
+24-01-19 
+
+★ forEach 배워서 아이디 일회용번호 QR 로그인 나오는 것 수정해서 전에 사용하던거 before로 남겨둠 ★ 
+
+*/
+
+
 // 로그인 탭 제목 클릭 시 해당 내용 활성화 js
 //0. (초기) 로그인내용0, 일회용 내용 x , qr코드내용 x id로그인 제목 활성화 (css)
 //1. id 로그인을 클릭하면 로그인 내용 o 일회용 내용 x qr코드내용 x 
@@ -6,100 +14,63 @@
 
 // 제목 3개 내용 3개 
 
-/* const login_title = document.querySelectorAll(".login_title h2 > a") */  /* 선택하는 탭  밑으로 내림 */
-
-/* const login_title_id= document.querySelectorAll(".login_title h2 > a") */ 
-// 내용 변수 
-/* ★개별 변수 삭제 이유는 밑에 통합 변수를 생성했고 이제 쓰이는 곳이 없기에 주석으로 남겨둠  */
-// const id_login_container = document.querySelector(".login_container .id_login") /* id로그인 내용 */
-// const disposable_login_container = document.querySelector(".login_container .disposable_login") /* 일회용번호 내용*/
-// const qr_login_container = document.querySelector(".login_container .qr_login") /* qr코드 내용*/
-// console.log(login_title)
-// console.log(id_login_container)
-// console.log(disposable_login_container)
-// console.log(qr_login_container)
-
-
-// const id_login_container = () => {for(let h of id_login_containe){id_login_containe.style.display="none"}}
-// id_login_container()
-
-// 내가 시도한 곳 
-
-// const login_title_hide = () => {for(let h of login_title){login_title.classList.remove="active"}} /* 클릭 전이 active */
-// login_title_hide()
-// const login_c = () =>{for (let c of login_c){login_c.style.display="block"}}
-// login_c()
-
-// login_c.forEach((t,i)=>{
-//     t.addEventListener("click", ()=>{
-//         login_title_hide()
-//         login_c[i].style.display = "block"
-//     })
-// })
-
-
-console.log("++++++++++++++++++++++++++++++-forEach시작-+++++++++++++++++++++++++++++++++++")
-// 제목을 눌렀을 때 그 제목에 해당하는 것 만 내용이 나와야하고 
-// 제목을 누르면 내용이 원하는 것만 나오려면 그 이전에 숨기기는게 필요함 내가 누른 것만 디자인이 들어가려면 
-// 모든 디자인을 풀어두는게 우선임 
-// 내가 잡은 변수가 2개 이상을 잡는 건가 ? 
-
 const login_title = document.querySelectorAll(".login_title h2 > a")
-
-// 통합 내용 변수 생성 로그인 컨텐츠용 - > 개별 변수 생성한거 삭제.
-const login_c_all = document.querySelectorAll(".login_container .login_c")
+/* const login_title_id= document.querySelectorAll(".login_title h2 > a") */
+// 내용 변수 
+const id_login_container = document.querySelector(".login_container .id_login")
+const disposable_login_container = document.querySelector(".login_container .disposable_login")
+const qr_login_container = document.querySelector(".login_container .qr_login")
 console.log(login_title)
+console.log(id_login_container)
+console.log(disposable_login_container)
+console.log(qr_login_container)
 
-// 모든내용 숨기기 - > id로그인만 보이기 (초기)
-const login_c_all_func = () => {
-    for(let cc of login_c_all){cc.style.display="none"}}
-login_c_all_func()
-login_c_all[0].style.display="block"
 
-// 초기값 id로그인 활성화 시키기 active 클릭 전!
+
+
+//초기 일회용  qr내용 숨기기
+disposable_login_container.style.display = "none"
+qr_login_container.style.display = "none"
+
+// 초기값 아이디 로그인 활성화 시키기 active 클래스 활성화  *클릭 전 
 login_title[0].parentElement.classList.add("active")
 
-/* 초기 탭 제목 디자인 숨기기 */
-const title_active_remove = () => {
-    for(let rr of login_title){rr.parentElement.classList.remove("active")}}
+// 일회용 번호 클릭하면 로그인 내용 x 일회용 내용 o qr내용 x
 
-/* 탭 제목 클릭 시 클릭한 대상에만 디자인 적용하기 */
-login_title.forEach((t,i)=>{ /* t i는 클릭한 대상 클랙한 애만 초기화가 이닌 전부 초기화 시키는 for문 필요 */
-    console.log(t,i)
-    t.addEventListener("click", ()=> {
-        title_active_remove() /* 위에 함수 호출 */
-        t.parentElement.classList.add("active") /* 누른애만 액티브가 들어가기 전  */
-        login_c_all_func()
-        login_c_all[i].style.display="block" 
-        // 로그인 타이틀 인덱스와 일치 
-        /* 누르는애랑 나오는애가 달라서 2개를 연결해야하는데 html에선 연결하는 부모가 달라서 
-        동일한 index로 연결해서 로그인타이틀 1 인덱스를 누르면 로그인 1 눌려라
-        
-        로그인 타이틀에 마지막 인덱스에 접근하고 싶으면 - > i 인덱스 사용 안해도 전부 접근할 수 있기에
-        특정 인덱스에 접근하고 싶으면 
-        
-        forEach는 타이틀에 접근 
-        */
-    })
+login_title[1].addEventListener("click", function () {
+    id_login_container.style.display = "none"
+    disposable_login_container.style.display = "block"
+    qr_login_container.style.display = "none"
+    login_title[1].parentElement.classList.add("active");
+    login_title[0].parentElement.classList.remove("active");
+    login_title[2].parentElement.classList.remove("active");
 })
-console.log("+++++++++++++++++++++++++++forEach 끝++++++++++++++++++++++++++++++++++++++")
 
-//login_c 전부를 묶는 변수 컨테이너들을 묶는 변수 
-// login_title[0].parentElement.classList.add("active")
-// id_login_container.style.display = "none"
-// disposable_login_container.style.display = "none"
-// qr_login_container.style.display = "none"
+// id 로그인을 클릭하면 로그인 내용 o 일회용 용 x qr코드내용 x 
 
-// login_title.forEach((t,i)=> {
-//     login_title.addEventListener("click", ()=>{
-//         login_title_hide()
+login_title[0].addEventListener("click", function () {
 
-//     })
-// })
+    id_login_container.style.display = "block"
+    disposable_login_container.style.display = "none"
+    qr_login_container.style.display = "none"
+    login_title[0].parentElement.classList.add("active");
+    login_title[1].parentElement.classList.remove("active");
+    login_title[2].parentElement.classList.remove("active");
 
+})
 
+// qr코드 클릭하면 로그인내용 x, 일회용 내용 x, qr코드내용 o
 
+login_title[2].addEventListener("click", function () {
+    id_login_container.style.display = "none"
+    disposable_login_container.style.display = "none"
+    qr_login_container.style.display = "block"
+    login_title[2].parentElement.classList.add("active")
+    login_title[0].parentElement.classList.remove("active")
+    login_title[1].parentElement.classList.remove("active")
+})
 
+/* 탭 3개 누를 시 메뉴 나오는 것 까지 작업 0115 */
 
 console.log("★ 로그인 메시지 출력 0117 ==============================================")
 
