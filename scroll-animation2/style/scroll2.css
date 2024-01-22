@@ -1,0 +1,95 @@
+html, body { scroll-behavior: smooth;}  
+
+/* *{margin: 0; padding: 0; box-sizing: border-box;}
+.hom_full_container {
+    max-width: 1600px; margin: 0 auto;
+} */
+.hom_full_container .home_img {} /* 이미지 큰 컨테이너  */
+.hom_full_container .home_img .bg {
+ /* overflow: hidden; */
+} /* 개별 이미지   */
+
+.hom_full_container .home_img .bg:nth-child(0) {
+    position: relative;
+} /* 개별 이미지   */
+.hom_full_container .home_img .bg:nth-child(1) {} /* 개별 이미지   */
+.hom_full_container .home_img .bg:nth-child(2) {} /* 개별 이미지   */
+.hom_full_container .home_img .bg:nth-child(3) {} /* 개별 이미지   */
+/*     position: relative; */
+/* 이미지들 개별 */
+/*  */
+.hom_full_container .hom_btn {
+/*     top:550px; right: -1280px; */
+} 
+
+.hom_full_container {
+    width:100%; height:100vh; /* overflow:hidden; */
+    background-size:cover;
+    background-position:center;
+}
+
+.hom_full_container .scroll_title h1 {
+    font-weight: bold;
+    font-size: 40px;
+    position: absolute; left: 30px; top: 30px;
+}
+
+.hom_btn{
+  /*   display: flex;
+    right: 50px; top: 50%;
+    position: fixed; flex-flow: column wrap; align-items: flex-end; */
+    position: fixed; flex-flow: row wrap; display: flex; align-items: flex-end; 
+    right: 50px; top: 50%;
+}
+
+.hom_btn #btn{
+ /*    background: #222; color: #fff; border-radius: 50%; 
+    width: 30px; height: 30px; position: relative;
+    margin-bottom: 10px; transition: all 0.5s;
+    overflow:hidden; */
+    position: absolute; left: 30px; top: 80px;
+    padding-right: 20px; display: block; overflow:hidden;
+    position: relative; width: 30px; height: 30px;
+}
+.hom_btn #btn:nth-child(0){
+
+}
+
+.hom_btn #btn:nth-child(1){
+    position: absolute; left:40px; top: 80px;
+    padding-right: 25px; display: block;
+    font-size: 20px;
+}
+
+.hom_btn #btn:nth-child(2){
+    position: absolute; left:60px; top: 80px;
+    padding-right: 25px; display: block;
+    font-size: 20px;
+}
+.hom_btn #btn:nth-child(3){
+    position: absolute; left:85px; top: 80px;
+    padding-right: 25px; display: block;
+    font-size: 20px;
+}
+.hom_btn #btn:nth-child(4){
+    position: absolute; left:110px; top: 80px;
+    padding-right: 25px; display: block;
+    font-size: 20px;
+}
+.hom_btn #btn:hover {
+/*    background: rgba(0, 0,0,0.5);
+    width: 100px; border-radius: 10px; */
+}
+
+.hom_btn #btn:after { /* 이쪽이 문제인 것 같은데? */
+/*   position: absolute; right: 22px; bottom: 1px;
+    font-size: 0.85rem; display: block; line-height: 30px;
+    white-space: nowrap; */
+}
+
+.hom_btn #btn:nth-child(1):hover::after {}
+.hom_btn #btn:nth-child(2):hover::after {}
+.hom_btn #btn:nth-child(3):hover::after {}
+.hom_btn #btn:nth-child(4):hover::after {}
+
+/* ------------------------------------------------- */
