@@ -22,7 +22,7 @@ html, body { scroll-behavior: smooth;}
 
 .hom_full_container {
     width:100%; height:100vh; /* overflow:hidden; */
-    background-size:cover;
+    background-size:coscrollTover;
     background-position:center;
 }
 

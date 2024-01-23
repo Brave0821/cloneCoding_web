@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="">
+    <meta name="description"content="">
+    <meta name="keywords"content="">
+    <title>3일간 이 창 보지 않음</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body, html {background: seagreen;}
+        #notice_popup {
+            width: 400px; height: 600px; border: 1px solid #000;
+            background: #fff; padding: 20px;
+            position: fixed; left: 50%; transform: translateX(-50%);
+            display: flex; flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+        #notice_popup .contents {}
+        #notice_popup .contents h1 {}
+        #notice_popup .contents p {}
+        #notice_popup .close_wrap {}
+        #notice_popup .close_wrap #chk {}
+        #notice_popup .close_wrap label {}
+        #notice_popup .close_wrap label #close_btn {}
+    </style>
+</head>
+<body>
+    <div id="notice_popup">
+        <div class="contents">
+            <h1>이벤트 제목</h1>
+            <p>이벤트내용</p>
+            <p>이벤트내용</p>
+            <p>이벤트내용</p>
+            <p>이벤트내용</p>
+        </div>
+        <p class="close_wrap">
+            <input type="checkbox" name="chk" id="chk">
+            <label for="chk">
+                3일 동안 이 창을 열지 않음
+                <button type="button" id="close_btn">닫기</button>
+            </label>
+        </p>
+    </div>
+    <script>
+        const close_btn = document.querySelector(".close_btn")
+        // chk가 선택된 상태로 닫기를 클릭하면 3일 동안 보지 않음 활성화
+        // chk가 선택해제된 상태로 닫기를 클릭하면 3일 동안 보지 않음 비활성화 
+        $("#close_btn").on("click",function(){
+            console.log(true)
+            // 닫기를 클릭하면 체크가 선택됬는지 않됬는지
+            if($("#chk").is(":checked")){
+                console.log("checked true")
+                $.cookie("popoup","none",{expires:3, path:"/"})
+                /* $.cookie("popoup","none",{안보이는 일 수 입력, 경로}) 제이쿼리 쿠리  */
+                // $("#notic_popup").hide()
+                $("#notice_popup").fadeOut("fast")
+            } 
+        })
+
+        if($.cookie("popup")=="none"){
+            $("#notice_popup").hide()
+        }
+        /* notice_popup */
+    </script>
+</body>
+</html>

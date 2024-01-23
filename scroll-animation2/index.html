@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,25 +11,31 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/scroll2.css">
 </head>
+
 <body>
-    <div class="hom_full_container">
-        <div class="hom_img"> <!-- bg는 동일함 -->
-            <div class="bg"><img src="./images/bg1.jpg" alt=""></div> <!--  -->
-            <div class="bg"><img src="./images/bg2.jpg" alt=""></div>
-            <div class="bg"><img src="./images/bg3.jpg" alt=""></div>
-            <div class="bg"><img src="./images/bg4.jpg" alt=""></div>
-        </div>
-        <div class="scroll_title">
-            <h1>Interior view</h1>
-        </div>
-        <div class="hom_btn"> <!-- link ==  -->
-            <button type="button" id="btn">A</button>
-            <button type="button" id="btn">B</button>
-            <button type="button" id="btn">C</button>
-            <button type="button" id="btn">D</button>
-        </div>
+    <header>
+        <h1>Interior view</h1>
+        <div class="circle"></div>
+        <nav>
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+            <a href="#">D</a>
+        </nav>
+    </header>
+    <main>
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+    </main>
+    <div class="link">
+        <a href="" title="인테리어A"></a> <!-- 활성화 되었다는 의미. 흰색 active  class="active" - >js에서 처리 -->
+        <a href="" title="인테리어A"></a>
+        <a href="" title="인테리어A"></a>
+        <a href="" title="인테리어A"></a>
     </div>
-    <script src="./script/scroll1.js"></script>
+    <script src="./script/scroll2.js"></script>
 </body>
 
 </html>

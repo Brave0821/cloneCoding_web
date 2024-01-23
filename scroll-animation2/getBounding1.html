@@ -1,0 +1,72 @@
+<!-- getBounding1 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="">
+    <meta name="description"content="">
+    <meta name="keywords"content="">
+    <title>getBounding1</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <style>
+        body, html {height: 300vh;}
+        #result { 
+            background: seagreen; color: #fff;
+            position: relative; top: 300px;
+            /*transform: translateY(300px); */ 
+            font-size: 50px; font-weight:bold; text-align: center;
+            padding-bottom: 10px; 
+    }
+    .bg {height: 100vh; opacity: 0;} /* 모든 bg 숨김 */
+    .bg1 {background: tan; opacity: 1;} /* bg1만 보임 */
+    .bg2 {background:royalblue}
+    .bg3 {background:sandybrown}
+    .bg4 {background:salmon}
+    /* 스크롤 위치에 따라 등장 시 적용되는 animation */
+    @keyframes opacity {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    </style>
+</head>
+<body>
+    <p id="result">result</p>
+    <main>
+        <div class="bg bg1"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+    </main>
+    <script>
+        const result = document.querySelector("#result")
+        console.log(`result의 위치1=>${result.offsetTop}`)
+        console.log(`result의 위치2=>${result.getBoundingClientRect().top}`) 
+        /* 보는 영역을 기준으로 여기서 여기까지 몇인가?니까 다른 것 */
+        const bg = document.querySelectorAll(".bg")
+        
+        // 스크롤 했을 때 bg2가 보일떄쯤  aanimation opacity가 적용
+        result.addEventListener("click",()=>{
+            result.style.animation = "opacity 1.5s both"
+        })
+
+        window.addEventListener("scroll",()=>{
+            console.log(bg[0].getBoundingClientRect().top)
+            if(bg[1].getBoundingClientRect().top <= 400){
+                bg[1].style.animation = "opacity 1.5s both"
+            } /* top 기준으로 */
+
+            if(bg[2].getBoundingClientRect().top <= 400){
+                bg[2].style.animation = "opacity 1.5s both"
+            } /* top 기준으로 */
+
+            if(bg[3].getBoundingClientRect().top <= 400){
+                bg[3].style.animation = "opacity 1.5s both"
+            } /* top 기준으로 */
+
+
+
+        })
+    </script>
+</body>
+</html>

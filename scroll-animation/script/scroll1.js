@@ -9,6 +9,11 @@ btn.forEach((t,i)=>{
 })
 
 // a태그로 한 경우 
+/* 
+d 
+
+*/
+
 
 /* link_a.forEach((t,i)=>{
     t.addEventListener("click",(e)=>{

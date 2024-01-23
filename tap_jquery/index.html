@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="">
+    <meta name="description"content="">
+    <meta name="keywords"content="">
+    <title>tap_jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="tab">
+        <div class="tab_title"> <!-- 로그인 일회용 번호 제목 -->
+            <a href="#">제목1</a>
+            <a href="#">제목2</a>
+        </div>
+        <div class="tab_contents">
+            <div class="con con1">내용1</div> <!-- 로그인 내용  -->
+            <div class="con con2">내용2</div> <!-- 처음에는 보이면 안됨 -->
+        </div>
+    </div>
+    <script>
+        $(".con2").hide(); /* 숨김 */
+        $(".tab_title a:nth-child(1)").on("click",function(){
+            $(".con1").show()
+            $(".con2").hide();
+        })
+        $(".tab_title a:nth-child(2)").on("click",function(){
+            $(".con1").hide();
+            $(".con2").show()
+        })
+    </script>
+</body>
+</html>
